@@ -1,0 +1,144 @@
+{
+  "name": "use-vscode",
+  "displayName": "use-vscode",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./build/ext-src/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "useocl-vscode",
+          "title": "USE OCL",
+          "icon": "public/use.png"
+        }
+      ]
+    },
+    "views": {
+      "useocl-vscode": [
+        {
+          "id": "useocl-quick-access",
+          "name": "Quick access"
+        },
+        {
+          "id": "useocl-browser",
+          "name": "Browser"
+        },
+        {
+          "id": "useocl-preview",
+          "name": "Preview"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "useocl-quick-access",
+        "contents": "In order to get started with USE OCL in vscode.\n[Start USE OCL console](command:useocl-vscode.server-start)\n[Open USE GUI](command:useocl-vscode.gui-start)",
+        "when": "activeWebviewPanelId != useocl-panel"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "useocl-vscode.gui-start",
+          "when": "view == useocl-quick-access",
+          "group": "navigation"
+        },
+        {
+          "command": "useocl-vscode.server-start",
+          "when": "view == useocl-quick-access",
+          "group": "navigation"
+        },
+        {
+          "command": "useocl-vscode.browser-refresh",
+          "when": "view == useocl-browser",
+          "group": "navigation"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "useocl-vscode.gui-start",
+        "title": "Open USE OCL GUI",
+        "category": "USE OCL",
+        "icon": "$(eye)"
+      },
+      {
+        "command": "useocl-vscode.server-start",
+        "title": "Start USE OCL Backend",
+        "category": "USE OCL",
+        "icon": "$(debug-start)"
+      },
+      {
+        "command": "useocl-vscode.open-spec",
+        "title": "Open",
+        "icon": "$(new-folder)"
+      },
+      {
+        "command": "useocl-vscode.browser-refresh",
+        "title": "Refresh",
+        "icon": "$(refresh)"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile && pnpm run vite-build",
+    "compile": "tsc -p tsconfig.ext.json",
+    "watch": "tsc -watch -p tsconfig.ext.json",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test",
+    "vite-dev": "vite",
+    "vite-hot": "vite build --watch",
+    "vite-safe-build": "tsc && vite build",
+    "vite-build": "vite build",
+    "vite-lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "vite-preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.6",
+    "@joint/core": "^4.0.2",
+    "@reduxjs/toolkit": "^1.9.7",
+    "antd": "^5.16.2",
+    "axios": "^1.6.8",
+    "canvg": "^4.0.1",
+    "fast-deep-equal": "^3.1.3",
+    "html2canvas": "^1.4.1",
+    "immer": "^10.0.2",
+    "jointjs": "^3.7.5",
+    "jspdf": "^2.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
+    "react-error-boundary": "^4.0.13",
+    "react-redux": "^8.1.3",
+    "use-debounce": "^10.0.0"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.2.3",
+    "@types/backbone": "^1.4.15",
+    "@types/jquery": "^3.5.18",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vscode/test-cli": "^0.0.8",
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "typescript": "^5.3.3",
+    "vite": "^5.2.0"
+  }
+}

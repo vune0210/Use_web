@@ -1,0 +1,6 @@
+@import "~../../node_modules/jointjs/dist/joint.css";
+
+.App {
+    text-align: center;
+    position: relative;
+}

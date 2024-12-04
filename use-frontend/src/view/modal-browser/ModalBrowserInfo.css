@@ -1,0 +1,9 @@
+.modal-browser-info {
+    margin: 16px;
+    padding: 16px 0;
+    border-top: 1px solid #dddddd;
+    white-space: pre;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    text-wrap: pretty;
+    user-select: text;
+}

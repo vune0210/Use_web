@@ -1,0 +1,24 @@
+.class-node {
+    box-sizing: border-box;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+    background: white;
+    width: 138px;
+}
+
+.class-node table {
+    border: 1px solid black;
+}
+
+.class-node td,
+th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.class-node td {
+    text-align: left;
+}

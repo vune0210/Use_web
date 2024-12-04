@@ -1,0 +1,22 @@
+.dia-node.class-node.container {
+    border: 1px solid black;
+    min-width: 100px;
+}
+
+.class-node .classname {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 4px 16px;
+}
+
+.class-node .attribute {
+    padding: 2px 8px;
+    text-wrap: nowrap;
+}
+
+.class-node .operation {
+    border-top: 1px solid black;
+    padding: 2px 8px;
+    text-wrap: nowrap;
+}

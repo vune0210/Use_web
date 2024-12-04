@@ -1,0 +1,12 @@
+@import "~../../node_modules/jointjs/dist/joint.css";
+
+.paper {
+    position: relative;
+    overflow: hidden;
+}
+
+.paper > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

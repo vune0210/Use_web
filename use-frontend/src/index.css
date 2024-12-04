@@ -1,0 +1,33 @@
+/* Global */
+body {
+    margin: 0
+}
+
+.button-space-between button {
+    margin-right: 8px;
+}
+
+/* main.tsx */
+.app-spin {
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-spin img {
+    margin-bottom: 16px;
+}
+
+/* App.tsx */
+.img-logo {
+    margin-right: 16px;
+}
+
+/* Toolbar.tsx */
+.app-toolbar {
+    margin-top: 8px;
+    padding: 8px 0px
+}

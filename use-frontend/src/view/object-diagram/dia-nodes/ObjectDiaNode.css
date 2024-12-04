@@ -1,0 +1,22 @@
+.dia-node.object-node.container {
+    border: 1px solid black;
+    min-width: 100px;
+}
+
+.object-node .objectname {
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    padding: 4px 16px;
+}
+
+.object-node .attribute {
+    padding: 2px 8px;
+    text-wrap: nowrap;
+}
+
+.object-node .operation {
+    border-top: 1px solid black;
+    padding: 2px 8px;
+    text-wrap: nowrap;
+}
